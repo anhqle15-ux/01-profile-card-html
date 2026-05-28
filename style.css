@@ -1,0 +1,73 @@
+
+/* style.css - blank stylesheet created */
+
+/* Apply the page background color and set a default font for readability */
+body {
+	background-color: lightblue;
+	font-family: 'Segoe UI', Verdana, sans-serif;
+}
+
+/* Center the main page title, enlarge it, and set its color */
+header h1 {
+	text-align: center;
+	font-size: 2.5rem;
+	margin: 1rem 0;
+	color: darkblue;
+}
+
+/* Center both profile headings and add consistent vertical spacing */
+.profile-card h2,
+.profile-card h3 {
+	text-align: center;
+	margin: 0.25rem 0;
+}
+
+/* Make the profile name larger and lighter in color */
+.profile-card h2 {
+	font-size: 2rem;
+	color: lightgrey;
+}
+
+/* Style the profile card container with border, padding, and centering */
+.profile-card {
+	border: 2px solid #333;
+	border-radius: 8px;
+	padding: 2rem;
+	max-width: 500px;
+	margin: 2rem auto;
+	background-color: white;
+	text-align: center;
+}
+
+/* Limit image size, keep aspect ratio, and make it circular */
+.profile-card img {
+	width: 120px;
+	height: 120px;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-bottom: 1rem;
+}
+
+/* Keep the secondary heading slightly smaller than the main profile name */
+.profile-card h3 {
+	font-size: 1.25rem;
+}
+
+/* Improve paragraph readability with spacing and line height */
+.profile-card p {
+	font-size: 1.1rem;
+	line-height: 1.6;
+	margin: 1rem 0;
+	padding: 0 1rem;
+}
+
+/* Remove default list bullets inside the profile card and add spacing */
+.profile-card ul {
+	list-style: none;
+	padding: 0;
+	margin: 1rem 0;
+}
+
+.profile-card li {
+	margin: 0.5rem 0;
+}
