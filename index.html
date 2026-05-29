@@ -4,29 +4,119 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Anh's Profile Card</title>
+    <title>Anh Le | Personal Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Anh Le</h1>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">Anh Le</div>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#links">Links</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section class="profile-card">
-        <img src="img/placeholder.png" alt="Profile photo" />
-        <h2>Student</h2>
-        <p>Passionate about building clean, user-friendly web experiences with HTML, CSS, and JavaScript.</p>
+      <section id="home" class="hero-section">
+        <div class="container hero-content">
+          <div class="hero-card">
+            <img src="img/SeniorPhoto_2.png" alt="Anh Le profile photo" class="profile-photo" />
+            <p class="eyebrow">Hi, I'm Anh</p>
+            <h1>Student focused on clean web design and user-friendly interfaces</h1>
+            <p class="hero-copy">
+              I enjoy learning about creating polished websites and digital experiences that feel modern, simple, and reliable.
+            </p>
+            <a class="button" href="#contact">Get in touch</a>
+          </div>
+        </div>
+      </section>
 
-        <h3>My Favorite Websites</h3>
-        <ul>
-          <li><a href="https://www.bu.edu/">Boston University Website</a></li>
-          <li><a href="https://www.bu.edu/mybu/">Boston University MyBU</a></li>
-          <li><a href="https://www.nature.com/">Nature.com</a></li>
-          <li><a href="https://www.nlm.nih.gov/">National Library of Medicine</a></li>
-        </ul>
+      <section id="about" class="section white-section">
+        <div class="container section-grid">
+          <div class="section-header">
+            <span class="section-label">About Me</span>
+            <h2>Story</h2>
+          </div>
+          <div class="section-copy">
+            <p>
+              I am a Biology student building strong foundations in HTML, CSS, and JavaScript. I love turning ideas into clean, accessible web pages that look great on any device.
+            </p>
+            <p>
+              My goal is to grow my skills through real projects, thoughtful design, and a focus on polished user experiences.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section navy-section">
+        <div class="container">
+          <div class="section-header centered">
+            <span class="section-label light-label">Skills</span>
+            <h2>What I Do</h2>
+          </div>
+          <div class="card-grid">
+            <article class="feature-card">
+              <h3>Web Design</h3>
+              <p>Creating balanced layouts, typography, and visual structure for simple, modern websites.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Responsive Layouts</h3>
+              <p>Building mobile-friendly pages that adapt smoothly across tablets and phones.</p>
+            </article>
+            <article class="feature-card">
+              <h3>HTML &amp; CSS</h3>
+              <p>Writing clean semantic markup and polished styling without frameworks.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section white-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Projects</span>
+            <h2>Recent Work</h2>
+          </div>
+          <div class="card-grid projects-grid">
+            <article class="project-card">
+              <h3>Practice Test Simulator</h3>
+              <p>A clean, fast, and user-friendly application for simulating practice tests.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="links" class="section navy-section">
+        <div class="container">
+          <div class="section-header centered">
+            <span class="section-label light-label">Favorite Links</span>
+            <h2>Websites I Use</h2>
+          </div>
+          <ul class="link-list">
+            <li><a href="https://www.bu.edu/" target="_blank" rel="noreferrer">Boston University</a></li>
+            <li><a href="https://www.bu.edu/mybu/" target="_blank" rel="noreferrer">MyBU Portal</a></li>
+            <li><a href="https://www.nature.com/" target="_blank" rel="noreferrer">Nature</a></li>
+            <li><a href="https://www.nlm.nih.gov/" target="_blank" rel="noreferrer">National Library of Medicine</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section white-section footer-section">
+        <div class="container section-footer">
+          <div>
+            <span class="section-label">Contact</span>
+            <h2>Let's Connect</h2>
+            <p>I'm always open to learning new web skills and working on creative projects.</p>
+          </div>
+          <a class="button secondary-button" href="mailto:anh@example.com">Email Me</a>
+        </div>
       </section>
     </main>
-    <script src="script.js"></script>
   </body>
 </html>

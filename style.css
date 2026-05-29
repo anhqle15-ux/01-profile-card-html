@@ -1,73 +1,344 @@
 
-/* style.css - blank stylesheet created */
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #102a43;
+  background-color: #071a35;
+}
 
-/* Apply the page background color and set a default font for readability */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-	background-color: lightblue;
-	font-family: 'Segoe UI', Verdana, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #081d3a 0%, #0f2a50 100%);
 }
 
-/* Center the main page title, enlarge it, and set its color */
-header h1 {
-	text-align: center;
-	font-size: 2.5rem;
-	margin: 1rem 0;
-	color: darkblue;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-/* Center both profile headings and add consistent vertical spacing */
-.profile-card h2,
-.profile-card h3 {
-	text-align: center;
-	margin: 0.25rem 0;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Make the profile name larger and lighter in color */
-.profile-card h2 {
-	font-size: 2rem;
-	color: lightgrey;
+a:hover,
+button:hover {
+  opacity: 0.92;
 }
 
-/* Style the profile card container with border, padding, and centering */
-.profile-card {
-	border: 2px solid #333;
-	border-radius: 8px;
-	padding: 2rem;
-	max-width: 500px;
-	margin: 2rem auto;
-	background-color: white;
-	text-align: center;
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(8, 26, 58, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Limit image size, keep aspect ratio, and make it circular */
-.profile-card img {
-	width: 120px;
-	height: 120px;
-	object-fit: cover;
-	border-radius: 50%;
-	margin-bottom: 1rem;
+.header-inner,
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
 }
 
-/* Keep the secondary heading slightly smaller than the main profile name */
-.profile-card h3 {
-	font-size: 1.25rem;
+.site-header {
+  padding: 1rem 0;
 }
 
-/* Improve paragraph readability with spacing and line height */
-.profile-card p {
-	font-size: 1.1rem;
-	line-height: 1.6;
-	margin: 1rem 0;
-	padding: 0 1rem;
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #f8fafc;
 }
 
-/* Remove default list bullets inside the profile card and add spacing */
-.profile-card ul {
-	list-style: none;
-	padding: 0;
-	margin: 1rem 0;
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
 }
 
-.profile-card li {
-	margin: 0.5rem 0;
+.site-nav a {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: #ffffff;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-section {
+  padding: 4rem 0 3rem;
+}
+
+.hero-content {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.hero-card {
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 45%), #0d2754;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  padding: 3rem 2rem 2.5rem;
+  width: min(760px, 100%);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.15);
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.18);
+  margin: 0 auto 1.5rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #7f9bb3;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+}
+
+.hero-card h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  color: #f8fafc;
+}
+
+.hero-copy {
+  max-width: 720px;
+  margin: 1.5rem auto 2rem;
+  color: #dbeafe;
+  font-size: 1.05rem;
+}
+
+.button {
+  display: inline-block;
+  background: #1d4ed8;
+  color: #ffffff;
+  padding: 0.95rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  background: #2563eb;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.white-section {
+  background: #f8fafc;
+  color: #102a43;
+}
+
+.navy-section {
+  background: #0b1f3f;
+  color: #f8fafc;
+}
+
+.section-header {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  text-align: left;
+}
+
+.section-header.centered {
+  text-align: center;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.light-label {
+  color: #93c5fd;
+}
+
+.section-header h2 {
+  margin: 0.75rem 0 0;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1.05;
+}
+
+.section-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.section-copy p {
+  margin: 0 0 1rem;
+  max-width: 680px;
+}
+
+.card-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.feature-card,
+.project-card {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 24px;
+  padding: 1.8rem;
+  min-height: 170px;
+  border: 1px solid rgba(16, 42, 67, 0.08);
+}
+
+.navy-section .feature-card,
+.navy-section .project-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.feature-card h3,
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+  font-size: 1.25rem;
+}
+
+.feature-card p,
+.project-card p {
+  margin: 0;
+  color: inherit;
+  opacity: 0.88;
+}
+
+.projects-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 560px;
+  display: grid;
+  gap: 1rem;
+}
+
+.link-list li {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.link-list a {
+  display: block;
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.footer-section {
+  padding-bottom: 5rem;
+}
+
+.section-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-footer p {
+  max-width: 580px;
+  margin: 1rem 0 0;
+  color: inherit;
+}
+
+.secondary-button {
+  background: transparent;
+  border: 1px solid #ffffff;
+}
+
+@media (min-width: 768px) {
+  .site-header,
+  .hero-section,
+  .section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-nav {
+    margin-top: 0;
+  }
+
+  .section-footer {
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero-card {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .site-nav {
+    justify-content: center;
+  }
+
+  .section-header {
+    text-align: center;
+  }
+
+  .section-header.centered {
+    text-align: center;
+  }
+
+  .section-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-footer a {
+    width: 100%;
+    max-width: 300px;
+  }
 }
