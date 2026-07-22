@@ -221,6 +221,14 @@ button:hover {
   padding: 1.8rem;
   min-height: 170px;
   border: 1px solid rgba(16, 42, 67, 0.08);
+  display: block;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(16, 42, 67, 0.12);
 }
 
 .navy-section .feature-card,
